@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbarr from "./MovieApp/Navbarr";
+import HeroSlider from "./MovieApp/HeroSlider";
+import MoviesList from "./MovieApp/MoviesList";
+import movies from "./MovieApp/moviesData";
+import AddMovie from "./MovieApp/AddMovie";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ fontFamily: "Arial, sans-serif", background: "#0f0f1a", color: "white" }}>
+      <Navbarr />
+      <HeroSlider movies={movies.slice(0, 5)} />
+      <MoviesList movies={movies} />
+      <AddMovie/>
     </div>
   );
 }
