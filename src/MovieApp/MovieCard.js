@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./MovieCard.css";
+import {Link} from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   const [hover, setHover] = useState(false);
 
   return (
+    <Link to={`Trailers/${el.name}`}>
     <div
       className="movie-card"
       onMouseEnter={() => setHover(true)}
@@ -18,6 +20,7 @@ const MovieCard = ({ movie }) => {
       <p>{movie.description}</p>
       <strong>⭐ {movie.rating}</strong>
     </div>
+    </Link>
   );
 };
 
